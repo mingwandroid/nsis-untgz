@@ -171,6 +171,14 @@ FILE *_fdopen(int handle, const char *mode);
 #define _INC_STRING		/* don't allow windows.h to include MS clib's string.h */
 #define _INC_MEMORY
 #define _INC_EXCPT      /* don't allow VC8+SDK2003R2 to include MS clib */
+#if (_MSC_VER >= 1500)
+typedef enum _EXCEPTION_DISPOSITION {
+    ExceptionContinueExecution,
+    ExceptionContinueSearch,
+    ExceptionNestedException,
+    ExceptionCollidedUnwind
+} EXCEPTION_DISPOSITION;
+#endif
 #define _INC_CTYPE
 #define __STRALIGN_H_
 #include <windows.h>

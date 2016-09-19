@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "untgz", "untgz.vcproj", "{85D0D38F-6037-4435-9FFE-96570F86763A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug-ansi|Win32 = Debug-ansi|Win32
+		Debug-unicode|Win32 = Debug-unicode|Win32
+		Release-ansi|Win32 = Release-ansi|Win32
+		Release-unicode|Win32 = Release-unicode|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Debug-ansi|Win32.ActiveCfg = Debug-ansi|Win32
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Debug-ansi|Win32.Build.0 = Debug-ansi|Win32
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Debug-unicode|Win32.ActiveCfg = Debug-unicode|Win32
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Debug-unicode|Win32.Build.0 = Debug-unicode|Win32
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Release-ansi|Win32.ActiveCfg = Release-ansi|Win32
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Release-ansi|Win32.Build.0 = Release-ansi|Win32
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Release-unicode|Win32.ActiveCfg = Release-unicode|Win32
+		{85D0D38F-6037-4435-9FFE-96570F86763A}.Release-unicode|Win32.Build.0 = Release-unicode|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
