@@ -96,6 +96,14 @@
 // standard headers
 #include <stdarg.h>  /* va_list, va_start, va_end */
 
+// It may be possible to increase the stacksize instead of doing this, but
+// without doing one or the other you get link errors with __chkstk symbol
+// I opted not to mess with stacksize as NSIS plugins are a bit weird.
+#ifdef UNICODE
+#define STRBUFSZ 512
+#else
+#define STRBUFSZ 1024
+#endif
 
 /* The exported API without name mangling */
 extern "C" {
@@ -197,9 +205,8 @@ void argParse(HWND hwndParent, int string_size, TCHAR *variables, stack_t **stac
               TCHAR *cmd, TCHAR *cmdline, gzFile *tgzFile, int *compressionMethod,
               int *junkPaths, enum KeepMode *keep, TCHAR *basePath, int *failOnHardLinks)
 {
-  TCHAR buf[1024];     /* used for argument processor or other temp buffer */
-  TCHAR iPath[1024];   /* initial (base) directory for extraction */
-
+  TCHAR buf[STRBUFSZ];    /* used for argument processor or other temp buffer */
+  TCHAR iPath[STRBUFSZ];  /* initial (base) directory for extraction */
   /* setup stack and other general NSIS plugin stuff */
   pluginInit(hwndParent, string_size, variables, stacktop);
 
@@ -331,14 +338,14 @@ TCHAR * funcName[] = { _T("extract"), _T("extractV"), _T("extractFile") };
 void doExtraction(enum ExtractMode mode, HWND hwndParent, int string_size, TCHAR *variables, stack_t **stacktop)
 {
   register int result;
-  TCHAR cmdline[1024];     /* just used to display to user */
+  TCHAR cmdline[STRBUFSZ]; /* just used to display to user */
   int junkPaths;          /* default to extracting with paths -- highly insecure */
   int compressionMethod;  /* gzip or other compressed tar file */
   int failOnHardLinks;
   enum KeepMode keep;     /* overwrite mode */
   gzFile tgzFile = NULL;  /* the opened tarball (assuming argParse returns successfully) */
 
-  TCHAR buf[1024];         /* used for argument processor or other temp buffer */
+  TCHAR buf[STRBUFSZ];     /* used for argument processor or other temp buffer */
   int iCnt=0, xCnt=0;     /* count for elements in list */
   TCHAR **iList=NULL,      /* (char *) list[Cnt] for list of files to extract */
        **xList=NULL;      /* (char *) list[Cnt] for list of files to NOT extract */

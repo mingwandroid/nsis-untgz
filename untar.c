@@ -255,8 +255,13 @@ void getFullName(union tar_buffer *buffer, TCHAR *fname)
 	if (*(buffer->header.prefix) && (*(buffer->header.prefix) != ' '))
 	{
 		/* copy over prefix */
+#ifdef UNICODE
         MultiByteToWideChar(CP_ACP, 0, buffer->header.prefix, lstrlenA(buffer->header.prefix),
                     fname, BLOCKSIZE);
+#else
+		strncpy(fname,buffer->header.prefix, sizeof(buffer->header.prefix));
+		fname[sizeof(buffer->header.prefix)-1] = '\0';
+#endif
 		/* ensure ends in dir separator, implied after if full prefix size used */
 		len = strlen(fname)-1; /* assumed by test above at least 1 character */
 		if ((fname[len]!='/') && (fname[len]!='\\'))
@@ -268,8 +273,13 @@ void getFullName(union tar_buffer *buffer, TCHAR *fname)
 	}
 
 	/* copy over filename portion */
+#ifdef UNICODE
     MultiByteToWideChar(CP_ACP, 0, buffer->header.name, lstrlenA(buffer->header.name),
                 fname+len, BLOCKSIZE-len);
+#else
+	strncpy(fname+len,buffer->header.name, sizeof(buffer->header.name));
+	fname[len+sizeof(buffer->header.name)-1] = '\0'; /* ensure terminated */
+#endif
 }
 
 

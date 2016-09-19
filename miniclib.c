@@ -74,6 +74,7 @@ char * strrchr(const char *str, int c)
 	return NULL;
 }
 
+#ifdef UNICODE
 WCHAR * tstrrchr(const WCHAR *str, int c)
 {
 	const WCHAR *t = str + strlen(str);  /* assumes str is '\0' terminated */
@@ -85,6 +86,19 @@ WCHAR * tstrrchr(const WCHAR *str, int c)
 
 	return NULL;
 }
+#else
+char * tstrrchr(const char *str, int c)
+{
+	const char *t = str + strlen(str);  /* assumes str is '\0' terminated */
+	while (t >=  str)
+	{
+		if (*t == (char)c) return (char *)t;
+		t--;
+	}
+
+	return NULL;
+}
+#endif
 
 /* memmove,memcpy,memset,&memcmp from Paul Edwards public domain clib */
 void * memmove(void *s1, const void *s2, size_t n)
