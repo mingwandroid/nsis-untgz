@@ -80,7 +80,14 @@ void setuservariable(int varnum, TCHAR *var)
 void pluginInit(HWND hwndParent, int string_size, TCHAR *variables, stack_t **stacktop)
 {
   g_hwndParent=hwndParent;
-  g_hwndList = FindWindowEx(FindWindowEx(g_hwndParent,NULL,_T("#32770"),NULL),NULL,_T("SysListView32"),NULL);
+  if (g_hwndParent)
+  {
+    g_hwndList = FindWindowEx(FindWindowEx(g_hwndParent,NULL,_T("#32770"),NULL),NULL,_T("SysListView32"),NULL);
+  }
+  else
+  {
+    g_hwndList = NULL;
+  }
   EXDLL_INIT();
 }
 
