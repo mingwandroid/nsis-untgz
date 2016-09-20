@@ -247,20 +247,27 @@ void safetyStrip(TCHAR * fname)
 /* combines elements from tar header to produce
  * full [long] filename; prefix + [/] + name
  */
-void getFullName(union tar_buffer *buffer, TCHAR *fname)
+void getFullName(union tar_buffer *buffer, TCHAR *fname, int fname_size)
 {
 	int len = 0;
+	int errcode = 0, res;
 
 	/* NOTE: prepend buffer.head.prefix if tar archive expected to have it */
 	if (*(buffer->header.prefix) && (*(buffer->header.prefix) != ' '))
 	{
 		/* copy over prefix */
 #ifdef UNICODE
-        MultiByteToWideChar(CP_ACP, 0, buffer->header.prefix, lstrlenA(buffer->header.prefix),
-                    fname, BLOCKSIZE);
+        res = MultiByteToWideChar(CP_ACP, 0, buffer->header.prefix, lstrlenA(buffer->header.prefix),
+                         fname, fname_size);
+		if (!res)
+			errcode = GetLastError();
 #else
-		strncpy(fname,buffer->header.prefix, sizeof(buffer->header.prefix));
-		fname[sizeof(buffer->header.prefix)-1] = '\0';
+		strncpy(fname, buffer->header.prefix, min(sizeof(buffer->header.prefix), fname_size));
+		if (fname[fname_size-1] != '\0')
+		{
+			fname[fname_size-1] = '\0';
+			errcode = ERROR_INSUFFICIENT_BUFFER;
+		}
 #endif
 		/* ensure ends in dir separator, implied after if full prefix size used */
 		len = strlen(fname)-1; /* assumed by test above at least 1 character */
@@ -274,12 +281,20 @@ void getFullName(union tar_buffer *buffer, TCHAR *fname)
 
 	/* copy over filename portion */
 #ifdef UNICODE
-    MultiByteToWideChar(CP_ACP, 0, buffer->header.name, lstrlenA(buffer->header.name),
-                fname+len, BLOCKSIZE-len);
+    res = MultiByteToWideChar(CP_ACP, 0, buffer->header.name, lstrlenA(buffer->header.name),
+                     fname+len, fname_size-len);
+	if (!res)
+		errcode = GetLastError();
 #else
-	strncpy(fname+len,buffer->header.name, sizeof(buffer->header.name));
-	fname[len+sizeof(buffer->header.name)-1] = '\0'; /* ensure terminated */
+	strncpy(fname+len, buffer->header.name, fname_size-len);
+	if (fname[fname_size-1] != '\0')
+	{
+		fname[fname_size-1] = '\0';
+		errcode = ERROR_INSUFFICIENT_BUFFER;
+	}
 #endif
+	if (errcode)
+		PrintMessage(_T("Warning: getFullName() failed [%d]"), errcode);
 }
 
 
@@ -557,7 +572,7 @@ int tgz_extract(gzFile in, int cm, int junkPaths, enum KeepMode keep, int iCnt, 
       {
         /* NOTE: prepends any prefix, including separator, and ensures terminated */
         memset(fname, 0, sizeof(fname));
-		getFullName(&buffer, fname);
+		getFullName(&buffer, fname, BLOCKSIZE);
       }
       else /* use (GNU) long filename that preceeded this header */
       {
