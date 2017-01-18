@@ -251,7 +251,6 @@ void getFullName(union tar_buffer *buffer, TCHAR *fname, int fname_size)
 {
 	int len = 0;
 	int errcode = 0, res;
-
 	/* NOTE: prepend buffer.head.prefix if tar archive expected to have it */
 	if (*(buffer->header.prefix) && (*(buffer->header.prefix) != ' '))
 	{
@@ -524,12 +523,14 @@ long readBlock(int cm, void *buffer)
  */
 int tgz_extract(gzFile in, int cm, int junkPaths, enum KeepMode keep, int iCnt, TCHAR *iList[], int xCnt, TCHAR *xList[], int failOnHardLinks)
 {
-  int           getheader = 1;    /* assume initial input has a tar header */
+  int           getheader = 1, res;    /* assume initial input has a tar header */
+  int           errcode = 0;
   HANDLE        outfile = INVALID_HANDLE_VALUE;
 
   union         tar_buffer buffer;
   unsigned long remaining;
   TCHAR          fname[BLOCKSIZE]; /* must be >= BLOCKSIZE bytes */
+  TCHAR          longfname[BLOCKSIZE]; /* must be >= BLOCKSIZE bytes */
   time_t        tartime;
 
   /* do any prep work for extracting from compressed TAR file */
@@ -749,8 +750,18 @@ int tgz_extract(gzFile in, int cm, int junkPaths, enum KeepMode keep, int iCnt, 
 		case GNUTYPE_LONGNAME:
 		{
 	      remaining = getoct(buffer.header.size,12);
-	      if (readBlock(cm, fname) < 0) return -1;
-	      fname[BLOCKSIZE-1] = '\0';
+	      if (readBlock(cm, longfname) < 0) return -1;
+	      longfname[BLOCKSIZE-1] = '\0';
+#ifdef UNICODE
+	      res = MultiByteToWideChar(CP_ACP, 0, longfname, lstrlenA(longfname), fname, BLOCKSIZE);
+	      if (!res)
+	          errcode = GetLastError();
+	      if (errcode)
+	          PrintMessage(_T("Warning: GNUTYPE_LONGNAME(MultiByteToWideChar) failed [%d]"), errcode);
+#else
+	      strncpy(fname, longfname, BLOCKSIZE);
+#endif
+//	      PrintMessage(_T("tgz_extract: buffer.header.typeflag = %d, GNUTYPE_LONGNAME = %d, GNUTYPE_LONGLINK = %d, %s\n"),buffer.header.typeflag,GNUTYPE_LONGNAME, GNUTYPE_LONGLINK, fname);
 	      if ((remaining >= BLOCKSIZE) || ((unsigned)strlen(fname) > remaining))
 	      {
 	          PrintMessage(_T("tgz_extract: invalid long name"));
