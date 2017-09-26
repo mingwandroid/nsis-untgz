@@ -256,7 +256,8 @@ void getFullName(union tar_buffer *buffer, TCHAR *fname, int fname_size)
 	{
 		/* copy over prefix */
 #ifdef UNICODE
-        res = MultiByteToWideChar(CP_ACP, 0, buffer->header.prefix, lstrlenA(buffer->header.prefix),
+        res = MultiByteToWideChar(CP_ACP, 0, buffer->header.prefix, 
+                         min(lstrlenA(buffer->header.prefix), sizeof(buffer->header.prefix)),
                          fname, fname_size);
 		if (!res)
 			errcode = GetLastError();
@@ -280,7 +281,8 @@ void getFullName(union tar_buffer *buffer, TCHAR *fname, int fname_size)
 
 	/* copy over filename portion */
 #ifdef UNICODE
-    res = MultiByteToWideChar(CP_ACP, 0, buffer->header.name, lstrlenA(buffer->header.name),
+    res = MultiByteToWideChar(CP_ACP, 0, buffer->header.name, 
+                     min(lstrlenA(buffer->header.name), sizeof(buffer->header.name)),
                      fname+len, fname_size-len);
 	if (!res)
 		errcode = GetLastError();
