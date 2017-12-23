@@ -17,8 +17,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug-ansi|Win32"
-			OutputDirectory=".\Debug"
-			IntermediateDirectory=".\Debug"
+			OutputDirectory="$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="2"
 			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC60.vsprops"
 			UseOfMFC="0"
@@ -38,29 +38,38 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
-				PreprocessorDefinitions="_DEBUG"
+				PreprocessorDefinitions="NDEBUG"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Debug/untgz.tlb"
+				TypeLibraryName=".\Release/untgz.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Gs16000"
-				Optimization="0"
-				AdditionalIncludeDirectories="./zlib,../../source/zlib"
-				PreprocessorDefinitions="_DEBUG;_WIN32;EXEHEAD;WIN32;_WINDOWS;NSIS_COMPRESS_USE_ZLIB"
-				MinimalRebuild="true"
+				Optimization="1"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="true"
+				FavorSizeOrSpeed="2"
+				OmitFramePointers="true"
+				EnableFiberSafeOptimizations="true"
+				WholeProgramOptimization="true"
+				AdditionalIncludeDirectories=".\zlib;.\lzma;.\bz2;"
+				PreprocessorDefinitions="NDEBUG;_WIN32;EXEHEAD;WIN32;_WINDOWS;NSIS_COMPRESS_USE_ZLIB"
+				IgnoreStandardIncludePath="false"
+				StringPooling="true"
 				ExceptionHandling="0"
 				BufferSecurityCheck="false"
-				PrecompiledHeaderFile=".\Debug/untgz.pch"
-				AssemblerListingLocation=".\Debug/"
-				ObjectFile=".\Debug/"
-				ProgramDataBaseFileName=".\Debug/"
-				BrowseInformation="1"
+				EnableFunctionLevelLinking="true"
+				RuntimeTypeInfo="false"
+				PrecompiledHeaderFile=".\Release/untgz.pch"
+				AssemblerOutput="2"
+				AssemblerListingLocation=".\Release/"
+				ObjectFile=".\Release/"
+				ProgramDataBaseFileName=".\Release/"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
-				DebugInformationFormat="4"
+				DebugInformationFormat="3"
+				ShowIncludes="false"
 				OmitDefaultLibName="true"
 			/>
 			<Tool
@@ -68,7 +77,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
+				PreprocessorDefinitions="NDEBUG"
 				Culture="1033"
 			/>
 			<Tool
@@ -77,16 +86,24 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
-				AdditionalDependencies="user32.lib"
-				OutputFile=".\Debug/untgz.dll"
-				LinkIncremental="2"
+				AdditionalOptions="user32.lib"
+				ShowProgress="2"
+				OutputFile="../Plugins/x86-ansi/untgz.dll"
+				LinkIncremental="1"
 				SuppressStartupBanner="true"
+				GenerateManifest="false"
 				IgnoreAllDefaultLibraries="true"
 				GenerateDebugInformation="true"
+				GenerateMapFile="true"
+				MapExports="true"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
 				OptimizeForWindows98="0"
+				LinkTimeCodeGeneration="1"
+				SetChecksum="true"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Debug/untgz.lib"
+				ImportLibrary=".\Release/untgz.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -100,7 +117,7 @@
 			/>
 			<Tool
 				Name="VCBscMakeTool"
-				OutputFile=".\Debug/untgz.bsc"
+				OutputFile=".\Release/untgz.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -250,29 +267,39 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
-				PreprocessorDefinitions="_DEBUG"
+				PreprocessorDefinitions="NDEBUG"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Debug/untgz.tlb"
+				TypeLibraryName=".\Release/untgz.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Gs16000"
+				AdditionalOptions="/Gs9999999"
 				Optimization="0"
-				AdditionalIncludeDirectories="./zlib,../../source/zlib"
-				PreprocessorDefinitions="_DEBUG;_WIN32;EXEHEAD;WIN32;_WINDOWS;NSIS_COMPRESS_USE_ZLIB"
-				MinimalRebuild="true"
+				InlineFunctionExpansion="0"
+				EnableIntrinsicFunctions="false"
+				FavorSizeOrSpeed="0"
+				OmitFramePointers="false"
+				EnableFiberSafeOptimizations="false"
+				WholeProgramOptimization="false"
+				AdditionalIncludeDirectories=".\zlib;.\lzma;.\bz2;"
+				PreprocessorDefinitions="NDEBUG;_WIN32;EXEHEAD;WIN32;_WINDOWS;NSIS_COMPRESS_USE_ZLIB"
+				IgnoreStandardIncludePath="false"
+				StringPooling="true"
 				ExceptionHandling="0"
 				BufferSecurityCheck="false"
-				PrecompiledHeaderFile=".\Debug/untgz.pch"
-				AssemblerListingLocation=".\Debug/"
-				ObjectFile=".\Debug/"
-				ProgramDataBaseFileName=".\Debug/"
-				BrowseInformation="1"
+				EnableFunctionLevelLinking="true"
+				RuntimeTypeInfo="false"
+				PrecompiledHeaderFile=".\Debug-unicode/untgz.pch"
+				AssemblerOutput="2"
+				AssemblerListingLocation=".\Debug-unicode\"
+				ObjectFile=".\Debug-unicode\"
+				ProgramDataBaseFileName=".\Debug-unicode\"
 				WarningLevel="3"
 				SuppressStartupBanner="true"
-				DebugInformationFormat="4"
+				DebugInformationFormat="3"
+				ShowIncludes="false"
 				OmitDefaultLibName="true"
 			/>
 			<Tool
@@ -280,7 +307,7 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
-				PreprocessorDefinitions="_DEBUG"
+				PreprocessorDefinitions="NDEBUG"
 				Culture="1033"
 			/>
 			<Tool
@@ -289,16 +316,26 @@
 			<Tool
 				Name="VCLinkerTool"
 				IgnoreImportLibrary="true"
+				AdditionalOptions="user32.lib"
 				AdditionalDependencies="user32.lib"
-				OutputFile=".\Debug/untgz.dll"
-				LinkIncremental="2"
+				ShowProgress="1"
+				OutputFile="../Plugins/x86-Debug-unicode/untgz.dll"
+				LinkIncremental="1"
 				SuppressStartupBanner="true"
+				GenerateManifest="false"
 				IgnoreAllDefaultLibraries="true"
 				GenerateDebugInformation="true"
+				ProgramDatabaseFile="../Plugins/x86-Debug-unicode/untgz.pdb"
+				GenerateMapFile="true"
+				MapExports="true"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
 				OptimizeForWindows98="0"
+				LinkTimeCodeGeneration="1"
+				SetChecksum="true"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Debug/untgz.lib"
+				ImportLibrary=""
 				TargetMachine="1"
 			/>
 			<Tool
@@ -312,7 +349,7 @@
 			/>
 			<Tool
 				Name="VCBscMakeTool"
-				OutputFile=".\Debug/untgz.bsc"
+				OutputFile=".\Release/untgz.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -360,7 +397,7 @@
 				InlineFunctionExpansion="2"
 				EnableIntrinsicFunctions="true"
 				FavorSizeOrSpeed="2"
-				OmitFramePointers="true"
+				OmitFramePointers="false"
 				EnableFiberSafeOptimizations="true"
 				WholeProgramOptimization="true"
 				AdditionalIncludeDirectories=".\zlib;.\lzma;.\bz2;"
@@ -413,7 +450,7 @@
 				SetChecksum="true"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Release/untgz.lib"
+				ImportLibrary=""
 				TargetMachine="1"
 			/>
 			<Tool
@@ -590,26 +627,6 @@
 			<File
 				RelativePath="..\bz2\huffman.c"
 				>
-				<FileConfiguration
-					Name="Debug-ansi|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						OmitFramePointers="false"
-						SmallerTypeCheck="false"
-						OmitDefaultLibName="true"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Debug-unicode|Win32"
-					>
-					<Tool
-						Name="VCCLCompilerTool"
-						OmitFramePointers="false"
-						SmallerTypeCheck="false"
-						OmitDefaultLibName="true"
-					/>
-				</FileConfiguration>
 			</File>
 			<File
 				RelativePath="..\zlib\inffast.c"
@@ -819,6 +836,7 @@
 					>
 					<Tool
 						Name="VCCLCompilerTool"
+						WholeProgramOptimization="false"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
 					/>
@@ -838,6 +856,7 @@
 					>
 					<Tool
 						Name="VCCLCompilerTool"
+						WholeProgramOptimization="false"
 						AdditionalIncludeDirectories=""
 						PreprocessorDefinitions=""
 					/>

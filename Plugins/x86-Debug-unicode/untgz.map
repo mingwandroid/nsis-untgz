@@ -1,0 +1,286 @@
+ untgz
+
+ Timestamp is 5a3e9867 (Sat Dec 23 11:54:47 2017)
+
+ Preferred load address is 10000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000faa1H .text                   CODE
+ 0002:00000000 00000084H .idata$5                DATA
+ 0002:00000090 00003872H .rdata                  DATA
+ 0002:00003904 00000028H .idata$2                DATA
+ 0002:0000392c 00000014H .idata$3                DATA
+ 0002:00003940 00000084H .idata$4                DATA
+ 0002:000039c4 000001f2H .idata$6                DATA
+ 0002:00003bc0 0000006dH .edata                  DATA
+ 0002:00003c30 0000004aH .rdata$debug            DATA
+ 0003:00000000 00000c54H .data                   DATA
+ 0003:00000c60 00001040H .bss                    DATA
+ 0004:00000000 00000058H .rsrc$01                DATA
+ 0004:00000060 000004a8H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       ___safe_se_handler_count   00000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   00000000     <absolute>
+ 0001:00000000       _adler32                   10001000 f   adler32.obj
+ 0001:00000490       _BZ2_bzDecompressInit      10001490 f   bzlib.obj
+ 0001:00000660       _BZ2_indexIntoF            10001660 f   bzlib.obj
+ 0001:000006b0       _BZ2_bzDecompress          100016b0 f   bzlib.obj
+ 0001:00001c20       _BZ2_bzDecompressEnd       10002c20 f   bzlib.obj
+ 0001:00001d10       _BZ2_bzReadOpen            10002d10 f   bzlib.obj
+ 0001:00001f20       _BZ2_bzReadClose           10002f20 f   bzlib.obj
+ 0001:00001fe0       _BZ2_bzRead                10002fe0 f   bzlib.obj
+ 0001:00002290       _crc32                     10003290 f   crc32.obj
+ 0001:00002cf0       _BZ2_decompress            10003cf0 f   decompress.obj
+ 0001:00007240       _getFileType               10008240 f   filetype.obj
+ 0001:00007450       _gzopen                    10008450 f   gzio.obj
+ 0001:00007bf0       _gzread                    10008bf0 f   gzio.obj
+ 0001:00007fd0       _gzeof                     10008fd0 f   gzio.obj
+ 0001:00008090       _gzclose                   10009090 f   gzio.obj
+ 0001:000080d0       _BZ2_hbCreateDecodeTables  100090d0 f   huffman.obj
+ 0001:00008290       _inflate_fast              10009290 f   inffast.obj
+ 0001:000089f0       _inflateReset              100099f0 f   inflate.obj
+ 0001:00008ae0       _inflateInit2_             10009ae0 f   inflate.obj
+ 0001:00008c20       _inflate                   10009c20 f   inflate.obj
+ 0001:0000ad10       _inflateEnd                1000bd10 f   inflate.obj
+ 0001:0000ad90       _inflate_table             1000bd90 f   inftrees.obj
+ 0001:0000b3e0       _LzmaReadCompressed        1000c3e0 f   lzma.obj
+ 0001:0000b420       _MyReadFileAndCheck        1000c420 f   lzma.obj
+ 0001:0000b460       _lzma_init                 1000c460 f   lzma.obj
+ 0001:0000b640       _lzma_cleanup              1000c640 f   lzma.obj
+ 0001:0000b6a0       _lzma_read                 1000c6a0 f   lzma.obj
+ 0001:0000b7b0       _LzmaDecodeProperties      1000c7b0 f   LzmaDecode.obj
+ 0001:0000b8b0       _LzmaDecode                1000c8b0 f   LzmaDecode.obj
+ 0001:0000d130       _mCRTinit                  1000e130 f   miniclib.obj
+ 0001:0000d200       _malloc                    1000e200 f   miniclib.obj
+ 0001:0000d220       _free                      1000e220 f   miniclib.obj
+ 0001:0000d240       _strdup                    1000e240 f   miniclib.obj
+ 0001:0000d280       _strrchr                   1000e280 f   miniclib.obj
+ 0001:0000d2c0       _tstrrchr                  1000e2c0 f   miniclib.obj
+ 0001:0000d310       _memmove                   1000e310 f   miniclib.obj
+ 0001:0000d3b0       _memcpy                    1000e3b0 f   miniclib.obj
+ 0001:0000d490       _memset                    1000e490 f   miniclib.obj
+ 0001:0000d4d0       _fopen                     1000e4d0 f   miniclib.obj
+ 0001:0000d610       _fread                     1000e610 f   miniclib.obj
+ 0001:0000d670       _fclose                    1000e670 f   miniclib.obj
+ 0001:0000d6c0       _ftell                     1000e6c0 f   miniclib.obj
+ 0001:0000d6e0       __fdopen                   1000e6e0 f   miniclib.obj
+ 0001:0000d6f0       __A2U                      1000e6f0 f   miniclib.obj
+ 0001:0000d720       _popstring                 1000e720 f   nsisUtils.obj
+ 0001:0000d780       _getuservariable           1000e780 f   nsisUtils.obj
+ 0001:0000d7b0       _setuservariable           1000e7b0 f   nsisUtils.obj
+ 0001:0000d7f0       _pluginInit                1000e7f0 f   nsisUtils.obj
+ 0001:0000d860       _PrintMessage              1000e860 f   nsisUtils.obj
+ 0001:0000d8a0       _peekstring                1000e8a0 f   nsisUtils.obj
+ 0001:0000d8e0       _getArgList                1000e8e0 f   nsisUtils.obj
+ 0001:0000dbc0       _DetailPrint               1000ebc0 f   nsisUtils.obj
+ 0001:0000dc70       _getoct                    1000ec70 f   untar.obj
+ 0001:0000dcf0       _ExprMatch                 1000ecf0 f   untar.obj
+ 0001:0000ddf0       _valid_checksum            1000edf0 f   untar.obj
+ 0001:0000de90       _makedir                   1000ee90 f   untar.obj
+ 0001:0000dff0       _MakeHardLink              1000eff0 f   untar.obj
+ 0001:0000e090       _safetyStrip               1000f090 f   untar.obj
+ 0001:0000e0a0       _getFullName               1000f0a0 f   untar.obj
+ 0001:0000e210       _stripPath                 1000f210 f   untar.obj
+ 0001:0000e2a0       _matchname                 1000f2a0 f   untar.obj
+ 0001:0000e360       _cnv_tar2win_time          1000f360 f   untar.obj
+ 0001:0000e3a0       _bz_internal_error         1000f3a0 f   untar.obj
+ 0001:0000e3c0       _cm_init                   1000f3c0 f   untar.obj
+ 0001:0000e420       _cm_cleanup                1000f420 f   untar.obj
+ 0001:0000e480       _readBlock                 1000f480 f   untar.obj
+ 0001:0000e550       _tgz_extract               1000f550 f   untar.obj
+ 0001:0000ed70       __DllMainCRTStartup@12     1000fd70 f   untgz.obj
+ 0001:0000ed90       ?argParse@@YAXPAUHWND__@@HPA_WPAPAU_stack_t@@11PAPAXPAH4PAW4KeepMode@@14@Z 1000fd90 f   untgz.obj
+ 0001:0000f440       ?doExtraction@@YAXW4ExtractMode@@PAUHWND__@@HPA_WPAPAU_stack_t@@@Z 10010440 f   untgz.obj
+ 0001:0000fa00       _extract                   10010a00 f   untgz.obj
+ 0001:0000fa20       _extractV                  10010a20 f   untgz.obj
+ 0001:0000fa40       _extractFile               10010a40 f   untgz.obj
+ 0001:0000fa60       _zcalloc                   10010a60 f   zutil.obj
+ 0001:0000fa90       _zcfree                    10010a90 f   zutil.obj
+ 0002:00000000       __imp__WriteFile@20        10011000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__lstrcmpW@8          10011004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__SetCurrentDirectoryW@4 10011008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__FindFirstFileW@8    1001100c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__FindClose@4         10011010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__SetFileTime@16      10011014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__DeleteFileW@4       10011018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__lstrcmpiW@8         1001101c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__lstrlenW@4          10011020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__WideCharToMultiByte@32 10011024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__GetStdHandle@4      10011028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__HeapAlloc@12        1001102c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__GetProcessHeap@0    10011030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__HeapFree@12         10011034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__lstrcpyW@8          10011038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__lstrlenA@4          1001103c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__GetLastError@0      10011040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__CreateFileW@28      10011044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__ReadFile@20         10011048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__CloseHandle@4       1001104c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__SetFilePointer@16   10011050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__MultiByteToWideChar@24 10011054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__GlobalFree@4        10011058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__lstrcatW@8          1001105c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__CreateDirectoryW@8  10011060     kernel32:KERNEL32.dll
+ 0002:00000064       __imp__SetLastError@4      10011064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__GetProcAddress@8    10011068     kernel32:KERNEL32.dll
+ 0002:0000006c       __imp__LoadLibraryW@4      1001106c     kernel32:KERNEL32.dll
+ 0002:00000070       \177KERNEL32_NULL_THUNK_DATA 10011070     kernel32:KERNEL32.dll
+ 0002:00000074       __imp__SendMessageW@16     10011074     user32:USER32.dll
+ 0002:00000078       __imp__wvsprintfW@12       10011078     user32:USER32.dll
+ 0002:0000007c       __imp__FindWindowExW@16    1001107c     user32:USER32.dll
+ 0002:00000080       \177USER32_NULL_THUNK_DATA 10011080     user32:USER32.dll
+ 0002:000020b0       ??_C@_19NNMOHCMN@?$AAl?$AAz?$AAm?$AAa?$AA?$AA@ 100130b0     filetype.obj
+ 0002:000020bc       ??_C@_17MJHDDACF@?$AAt?$AAl?$AAz?$AA?$AA@ 100130bc     filetype.obj
+ 0002:000020c4       ??_C@_17PIIIJJNN@?$AAb?$AAz?$AA2?$AA?$AA@ 100130c4     filetype.obj
+ 0002:000020cc       ??_C@_17PDHJFBFF@?$AAt?$AAb?$AAz?$AA?$AA@ 100130cc     filetype.obj
+ 0002:000020d4       ??_C@_15FPEOCBEG@?$AAg?$AAz?$AA?$AA@ 100130d4     filetype.obj
+ 0002:000020dc       ??_C@_17KDLEMAOG@?$AAt?$AAg?$AAz?$AA?$AA@ 100130dc     filetype.obj
+ 0002:000020e4       ??_C@_02JDPG@rb?$AA@       100130e4     filetype.obj
+ 0002:000020e8       ??_C@_11LOCGONAA@?$AA?$AA@ 100130e8     filetype.obj
+ 0002:000020f4       ??_C@_0O@NBMNHND@1?42?43?4f?9untgz?$AA@ 100130f4     gzio.obj
+ 0002:00002104       ??_C@_01OGPIMHDM@?$DP?$AA@ 10013104     gzio.obj
+ 0002:00002108       ??_C@_0BM@FFFLPBBC@invalid?5literal?1length?5code?$AA@ 10013108     inffast.obj
+ 0002:00002124       ??_C@_0BG@LBKINIKP@invalid?5distance?5code?$AA@ 10013124     inffast.obj
+ 0002:0000213c       ??_C@_0BO@ECPMAOGG@invalid?5distance?5too?5far?5back?$AA@ 1001313c     inffast.obj
+ 0002:00002a08       ??_C@_0BH@FGKKJGOC@incorrect?5length?5check?$AA@ 10013a08     inflate.obj
+ 0002:00002a20       ??_C@_0BF@MEIGEHBE@incorrect?5data?5check?$AA@ 10013a20     inflate.obj
+ 0002:00002a38       ??_C@_0BG@GMDFCBGP@invalid?5distances?5set?$AA@ 10013a38     inflate.obj
+ 0002:00002a50       ??_C@_0BM@IIMGAINC@invalid?5literal?1lengths?5set?$AA@ 10013a50     inflate.obj
+ 0002:00002a6c       ??_C@_0BK@BMMPFBBH@invalid?5bit?5length?5repeat?$AA@ 10013a6c     inflate.obj
+ 0002:00002a88       ??_C@_0BJ@HDEPPGOH@invalid?5code?5lengths?5set?$AA@ 10013a88     inflate.obj
+ 0002:00002aa4       ??_C@_0CE@GMIGFPBB@too?5many?5length?5or?5distance?5symb@ 10013aa4     inflate.obj
+ 0002:00002ac8       ??_C@_0BN@LGAADGOK@invalid?5stored?5block?5lengths?$AA@ 10013ac8     inflate.obj
+ 0002:00002ae8       ??_C@_0BD@PJCBIDD@invalid?5block?5type?$AA@ 10013ae8     inflate.obj
+ 0002:00002afc       ??_C@_0BE@GONKLEPM@header?5crc?5mismatch?$AA@ 10013afc     inflate.obj
+ 0002:00002b10       ??_C@_0BJ@BLBBCOMO@unknown?5header?5flags?5set?$AA@ 10013b10     inflate.obj
+ 0002:00002b2c       ??_C@_0BE@EMOGCLGO@invalid?5window?5size?$AA@ 10013b2c     inflate.obj
+ 0002:00002b40       ??_C@_0BL@IHKGDAEE@unknown?5compression?5method?$AA@ 10013b40     inflate.obj
+ 0002:00002b5c       ??_C@_0BH@LIBMMIGA@incorrect?5header?5check?$AA@ 10013b5c     inflate.obj
+ 0002:00002b78       _inflate_copyright         10013b78     inftrees.obj
+ 0002:00002ca8       ??_C@_0BP@NPMPDOKH@lzma?3?5Can?5not?5read?5input?5file?4?$AA@ 10013ca8     lzma.obj
+ 0002:00002cc8       ??_C@_0BM@OMDNLJMK@Incorrect?5stream?5properties?$AA@ 10013cc8     lzma.obj
+ 0002:00002ce4       ??_C@_0BK@EMICLKPA@lzma_read?3?5Unexpected?5EOS?$AA@ 10013ce4     lzma.obj
+ 0002:00002d00       ??_C@_0BP@DPJBHENC@lzma_read?3?5Decoding?5error?5?$CI?$CFd?$CJ?$AA@ 10013d00     lzma.obj
+ 0002:00002d20       ??_C@_1O@PGKMPIBK@?$AA?$CD?$AA3?$AA2?$AA7?$AA7?$AA0?$AA?$AA@ 10013d20     nsisUtils.obj
+ 0002:00002d30       ??_C@_1BM@FEGPDFAG@?$AAS?$AAy?$AAs?$AAL?$AAi?$AAs?$AAt?$AAV?$AAi?$AAe?$AAw?$AA3?$AA2?$AA?$AA@ 10013d30     nsisUtils.obj
+ 0002:00002d50       ??_C@_1GK@IJCMNNGL@?$AA?4?$AA?4?$AA?2?$AAn?$AAs?$AAi?$AAs?$AAU?$AAt?$AAi?$AAl?$AAs?$AA?4?$AAc?$AA?3?$AA?3?$AAg?$AAe?$AAt?$AAA?$AAr?$AAg?$AAL?$AAi?$AAs?$AAt?$AA?$CI?$AA?$CJ?$AA?5?$AAI?$AAn?$AAt@ 10013d50     nsisUtils.obj
+ 0002:00002dbc       ??_C@_15PEKGMEOM@?$AA?8?$AA?5?$AA?$AA@ 10013dbc     nsisUtils.obj
+ 0002:00002dc4       ??_C@_13ODFOLHGE@?$AA?8?$AA?$AA@ 10013dc4     nsisUtils.obj
+ 0002:00002dc8       ??_C@_1FA@HBNEHDAN@?$AAW?$AAA?$AAR?$AAN?$AAI?$AAN?$AAG?$AA?3?$AA?5?$AAN?$AAS?$AAI?$AAS?$AA?5?$AAs?$AAt?$AAa?$AAc?$AAk?$AA?5?$AAi?$AAn?$AA?5?$AAu?$AAn?$AAd?$AAe?$AAf?$AAi?$AAn?$AAe?$AAd@ 10013dc8     nsisUtils.obj
+ 0002:00002e18       ??_C@_1JE@FIEPDIFJ@?$AAW?$AAA?$AAR?$AAN?$AAI?$AAN?$AAG?$AA?3?$AA?5?$AA?4?$AA?4?$AA?2?$AAn?$AAs?$AAi?$AAs?$AAU?$AAt?$AAi?$AAl?$AAs?$AA?4?$AAc?$AA?3?$AA?3?$AAg?$AAe?$AAt?$AAA?$AAr?$AAg?$AAL@ 10013e18     nsisUtils.obj
+ 0002:00002eb0       ??_C@_1HA@HCJCDNKG@?$AA?4?$AA?4?$AA?2?$AAn?$AAs?$AAi?$AAs?$AAU?$AAt?$AAi?$AAl?$AAs?$AA?4?$AAc?$AA?3?$AA?3?$AAg?$AAe?$AAt?$AAA?$AAr?$AAg?$AAL?$AAi?$AAs?$AAt?$AA?$CI?$AA?$CJ?$AA?5?$AAc?$AAa?$AAl@ 10013eb0     nsisUtils.obj
+ 0002:00002f20       ??_C@_1HC@ECJGENGD@?$AA?4?$AA?4?$AA?2?$AAn?$AAs?$AAi?$AAs?$AAU?$AAt?$AAi?$AAl?$AAs?$AA?4?$AAc?$AA?3?$AA?3?$AAg?$AAe?$AAt?$AAA?$AAr?$AAg?$AAL?$AAi?$AAs?$AAt?$AA?$CI?$AA?$CJ?$AA?5?$AAc?$AAa?$AAl@ 10013f20     nsisUtils.obj
+ 0002:00002f94       ??_C@_1DO@EPNECBKM@?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAc?$AAr?$AAe?$AAa?$AAt?$AAe?$AA?5?$AAd?$AAi?$AAr?$AAe?$AAc?$AAt?$AAo?$AAr?$AAy?$AA?5?$AA?$CF?$AAs?$AA?6?$AA?$AA@ 10013f94     untar.obj
+ 0002:00002fd4       ??_C@_0BA@LGDMGDBA@CreateHardLinkW?$AA@ 10013fd4     untar.obj
+ 0002:00002fe4       ??_C@_1CG@CDDMDOPG@?$AAH?$AAa?$AAr?$AAd?$AA?5?$AAl?$AAi?$AAn?$AAk?$AA?5?$AA?$CF?$AAs?$AA?5?$AAt?$AAo?$AA?5?$AA?$CF?$AAs?$AA?$AA@ 10013fe4     untar.obj
+ 0002:0000300c       ??_C@_1BK@DBDEIDLH@?$AAK?$AAE?$AAR?$AAN?$AAE?$AAL?$AA3?$AA2?$AA?4?$AAD?$AAL?$AAL?$AA?$AA@ 1001400c     untar.obj
+ 0002:00003028       ??_C@_1EG@LPKBJED@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAg?$AAe?$AAt?$AAF?$AAu?$AAl?$AAl?$AAN?$AAa?$AAm?$AAe?$AA?$CI?$AA?$CJ?$AA?5?$AAf?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AA?$FL?$AA?$CF@ 10014028     untar.obj
+ 0002:00003070       ??_C@_1EG@CEJJINNI@?$AAB?$AAZ?$AA2?$AA?3?$AA?5?$AAi?$AAn?$AAt?$AAe?$AAr?$AAn?$AAa?$AAl?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?5?$AAd?$AAe?$AAc?$AAo?$AAm?$AAp?$AAr?$AAe?$AAs?$AAs?$AAi?$AAn@ 10014070     untar.obj
+ 0002:000030b8       ??_C@_1BO@JKGKIPIO@?$AAf?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAg?$AAz?$AAc?$AAl?$AAo?$AAs?$AAe?$AA?$AA@ 100140b8     untar.obj
+ 0002:000030d8       ??_C@_1DM@MNOHNLOE@?$AAg?$AAz?$AAr?$AAe?$AAa?$AAd?$AA?3?$AA?5?$AAi?$AAn?$AAc?$AAo?$AAm?$AAp?$AAl?$AAe?$AAt?$AAe?$AA?5?$AAb?$AAl?$AAo?$AAc?$AAk?$AA?5?$AAr?$AAe?$AAa?$AAd?$AA?$AA@ 100140d8     untar.obj
+ 0002:00003114       ??_C@_1DI@MHKPJGOO@?$AAg?$AAz?$AAr?$AAe?$AAa?$AAd?$AA?3?$AA?5?$AAe?$AAr?$AAr?$AAo?$AAr?$AA?5?$AAd?$AAe?$AAc?$AAo?$AAm?$AAp?$AAr?$AAe?$AAs?$AAs?$AAi?$AAn?$AAg?$AA?$AA@ 10014114     untar.obj
+ 0002:0000314c       ??_C@_1DG@MDFBBJPL@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAw?$AAr?$AAi?$AAt?$AAe?$AA?5?$AAf?$AAa?$AAi?$AAl?$AAe?$AAd?$AA?5?$AAf?$AAo?$AAr?$AA?5?$AA?$CF?$AAs?$AA?$AA@ 1001414c     untar.obj
+ 0002:00003184       ??_C@_1DO@HBNNOJKP@?$AAt?$AAg?$AAz?$AA_?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AA?3?$AA?5?$AAi?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAl?$AAo?$AAn?$AAg?$AA?5?$AAn?$AAa?$AAm?$AAe?$AA?$AA@ 10014184     untar.obj
+ 0002:000031c8       ??_C@_1HG@EOJOKKGC@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAG?$AAN?$AAU?$AAT?$AAY?$AAP?$AAE?$AA_?$AAL?$AAO?$AAN?$AAG?$AAN?$AAA?$AAM?$AAE?$AA?$CI?$AAM?$AAu?$AAl?$AAt?$AAi?$AAB@ 100141c8     untar.obj
+ 0002:00003240       ??_C@_19LJDFFCJJ@?$AA?$CF?$AAs?$AA?$CF?$AAs?$AA?$AA@ 10014240     untar.obj
+ 0002:0000324c       ??_C@_1BE@FLILMNPP@?$AA?$CF?$AAs?$AA?$CF?$AAs?$AA?5?$AA?$FL?$AA?$CF?$AAd?$AA?$FN?$AA?$AA@ 1001424c     untar.obj
+ 0002:00003260       ??_C@_1FI@DDPADNGG@?$AAW?$AAa?$AAr?$AAn?$AAi?$AAn?$AAg?$AA?3?$AA?5?$AAu?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAc?$AAr?$AAe?$AAa?$AAt?$AAe?$AA?5?$AAh?$AAa?$AAr?$AAd?$AA?5?$AAl@ 10014260     untar.obj
+ 0002:000032b8       ??_C@_1BE@OHOOCFLC@?$AAS?$AAk?$AAi?$AAp?$AAp?$AAi?$AAn?$AAg?$AA?5?$AA?$AA@ 100142b8     untar.obj
+ 0002:000032cc       ??_C@_1BC@ONLFEHNJ@?$AAW?$AAr?$AAi?$AAt?$AAi?$AAn?$AAg?$AA?5?$AA?$AA@ 100142cc     untar.obj
+ 0002:000032e0       ??_C@_1DM@GPIIFIEE@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAC?$AAo?$AAu?$AAl?$AAd?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAc?$AAr?$AAe?$AAa?$AAt?$AAe?$AA?5?$AAf?$AAi?$AAl?$AAe?$AA?5?$AA?$AA@ 100142e0     untar.obj
+ 0002:00003320       ??_C@_1FE@EFJLNALN@?$AAt?$AAg?$AAz?$AA_?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AA?3?$AA?5?$AAu?$AAs?$AAi?$AAn?$AAg?$AA?5?$AAG?$AAN?$AAU?$AA?5?$AAl?$AAo?$AAn?$AAg?$AA?5?$AAf?$AAi?$AAl?$AAe@ 10014320     untar.obj
+ 0002:00003378       ??_C@_1EC@FGDLGNLE@?$AAt?$AAg?$AAz?$AA_?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AA?3?$AA?5?$AAb?$AAa?$AAd?$AA?5?$AAh?$AAe?$AAa?$AAd?$AAe?$AAr?$AA?5?$AAc?$AAh?$AAe?$AAc?$AAk?$AAs?$AAu?$AAm@ 10014378     untar.obj
+ 0002:000033c0       ??_C@_1HA@JJLMJHNH@?$AAt?$AAg?$AAz?$AA_?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AA?3?$AA?5?$AAu?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAi?$AAn?$AAi?$AAt?$AAi?$AAa?$AAl?$AAi?$AAz@ 100143c0     untar.obj
+ 0002:00003430       ??_C@_1BI@BMPGFAIP@?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AAF?$AAi?$AAl?$AAe?$AA?$AA@ 10014430     untgz.obj
+ 0002:00003448       ??_C@_1BC@BCIGEBNJ@?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AAV?$AA?$AA@ 10014448     untgz.obj
+ 0002:0000345c       ??_C@_1BA@CKOGEMHM@?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AA?$AA@ 1001445c     untgz.obj
+ 0002:0000346c       ??_C@_1DO@DFHDILPM@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAC?$AAo?$AAu?$AAl?$AAd?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAo?$AAp?$AAe?$AAn?$AA?5?$AAt?$AAa?$AAr?$AAb?$AAa?$AAl?$AAl?$AA?4?$AA?$AA@ 1001446c     untgz.obj
+ 0002:000034b0       ??_C@_1EO@PDKEJNPB@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAU?$AAn?$AAs?$AAu?$AAp?$AAp?$AAo?$AAr?$AAt?$AAe?$AAd?$AA?5?$AAc?$AAo?$AAm?$AAp?$AAr?$AAe?$AAs?$AAs?$AAi?$AAo?$AAn?$AA?5?$AAf@ 100144b0     untgz.obj
+ 0002:00003500       ??_C@_1FA@BILKDCHP@?$AAW?$AAA?$AAR?$AAN?$AAI?$AAN?$AAG?$AA?3?$AA?5?$AAi?$AAn?$AAv?$AAa?$AAl?$AAi?$AAd?$AA?5?$AAo?$AAp?$AAt?$AAi?$AAo?$AAn?$AA?5?$AA?$CI?$AA?$CF?$AAs?$AA?$CJ?$AA?0?$AA?5?$AAi?$AAg@ 10014500     untgz.obj
+ 0002:00003550       ??_C@_15GALJLHBD@?$AA?$DO?$AA?$DO?$AA?$AA@ 10014550     untgz.obj
+ 0002:00003558       ??_C@_15IHHINOJD@?$AA?$DM?$AA?$DM?$AA?$AA@ 10014558     untgz.obj
+ 0002:00003560       ??_C@_15OLECOAGL@?$AA?9?$AAf?$AA?$AA@ 10014560     untgz.obj
+ 0002:00003568       ??_C@_15FLIEMAMH@?$AA?9?$AAx?$AA?$AA@ 10014568     untgz.obj
+ 0002:00003570       ??_C@_1O@LDMELPBG@?$AA?9?$AAz?$AAa?$AAu?$AAt?$AAo?$AA?$AA@ 10014570     untgz.obj
+ 0002:00003580       ??_C@_17PGKHJGHA@?$AA?9?$AAz?$AAZ?$AA?$AA@ 10014580     untgz.obj
+ 0002:00003588       ??_C@_1M@IBIKEPJM@?$AA?9?$AAz?$AAb?$AAz?$AA2?$AA?$AA@ 10014588     untgz.obj
+ 0002:00003594       ??_C@_1O@FLBMACGK@?$AA?9?$AAz?$AAl?$AAz?$AAm?$AAa?$AA?$AA@ 10014594     untgz.obj
+ 0002:000035a4       ??_C@_1O@GCEEAIOB@?$AA?9?$AAz?$AAn?$AAo?$AAn?$AAe?$AA?$AA@ 100145a4     untgz.obj
+ 0002:000035b4       ??_C@_19IKDFONKL@?$AA?9?$AAz?$AAg?$AAz?$AA?$AA@ 100145b4     untgz.obj
+ 0002:000035c0       ??_C@_15PBINAIEM@?$AA?9?$AAz?$AA?$AA@ 100145c0     untgz.obj
+ 0002:000035c8       ??_C@_15KJOOBIBK@?$AA?9?$AAu?$AA?$AA@ 100145c8     untgz.obj
+ 0002:000035d0       ??_C@_15BJCIDILG@?$AA?9?$AAk?$AA?$AA@ 100145d0     untgz.obj
+ 0002:000035d8       ??_C@_15LJNJHFI@?$AA?9?$AAh?$AA?$AA@ 100145d8     untgz.obj
+ 0002:000035e0       ??_C@_15KBJEFPND@?$AA?9?$AAj?$AA?$AA@ 100145e0     untgz.obj
+ 0002:000035e8       ??_C@_17MLPJLFGD@?$AA?9?$AAd?$AA?5?$AA?$AA@ 100145e8     untgz.obj
+ 0002:000035f0       ??_C@_15EBELCIOA@?$AA?9?$AAd?$AA?$AA@ 100145f0     untgz.obj
+ 0002:000035f8       ??_C@_1M@MOFLFCEC@?$AA?$CF?$AAs?$AA?5?$AA?$CF?$AAs?$AA?$AA@ 100145f8     untgz.obj
+ 0002:00003604       ??_C@_1DM@FACCGKHC@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAt?$AAa?$AAr?$AAb?$AAa?$AAl?$AAl?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAs?$AAp?$AAe?$AAc?$AAi?$AAf?$AAi?$AAe?$AAd?$AA?4?$AA?$AA@ 10014604     untgz.obj
+ 0002:00003640       ??_C@_1BA@ICANLBCA@?$AAs?$AAu?$AAc?$AAc?$AAe?$AAs?$AAs?$AA?$AA@ 10014640     untgz.obj
+ 0002:00003650       ??_C@_13HOIJIPNN@?$AA?5?$AA?$AA@ 10014650     untgz.obj
+ 0002:00003654       ??_C@_1BA@OCKNBENI@?$AAu?$AAn?$AAt?$AAg?$AAz?$AA?3?$AA?3?$AA?$AA@ 10014654     untgz.obj
+ 0002:00003664       ??_C@_1CK@PKIAFICH@?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AAi?$AAo?$AAn?$AA?5?$AAc?$AAo?$AAm?$AAp?$AAl?$AAe?$AAt?$AAe?$AA?4?$AA?$AA@ 10014664     untgz.obj
+ 0002:00003690       ??_C@_1DO@LCEKJHDG@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AA?5?$AAf?$AAi?$AAl?$AAe?$AA?4?$AA?$AA@ 10014690     untgz.obj
+ 0002:000036d0       ??_C@_1EG@PIBDMPOI@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAU?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAc?$AAr?$AAe?$AAa?$AAt?$AAe?$AA?5?$AAh?$AAa?$AAr?$AAd?$AA?5?$AAl?$AAi?$AAn@ 100146d0     untgz.obj
+ 0002:00003718       ??_C@_1EK@IHFJHJKE@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAF?$AAa?$AAi?$AAl?$AAu?$AAr?$AAe?$AA?5?$AAr?$AAe?$AAa?$AAd?$AAi?$AAn?$AAg?$AA?5?$AAf?$AAr?$AAo?$AAm?$AA?5?$AAt?$AAa?$AAr?$AAb@ 10014718     untgz.obj
+ 0002:00003768       ??_C@_1EM@CEGNMGCE@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AAf?$AAi?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAe?$AAx?$AAt?$AAr?$AAa?$AAc?$AAt?$AA?5?$AAn?$AAo?$AAt?$AA?5?$AAs?$AAp?$AAe?$AAc?$AAi@ 10014768     untgz.obj
+ 0002:000037b4       ??_C@_19PEIEMHKE@?$AA?$DP?$AA?9?$AA?9?$AA?$DP?$AA?$AA@ 100147b4     untgz.obj
+ 0002:000037c0       ??_C@_1FM@FAHHCMIN@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AA?9?$AAx?$AA?5?$AAu?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAo?$AAb?$AAt?$AAa?$AAi?$AAn?$AA?5?$AAe?$AAx?$AAc?$AAl?$AAu@ 100147c0     untgz.obj
+ 0002:0000381c       ??_C@_17LPONHHID@?$AA?9?$AAx?$AA?5?$AA?$AA@ 1001481c     untgz.obj
+ 0002:00003828       ??_C@_1FM@JDHDDBGD@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AA?9?$AAi?$AA?5?$AAu?$AAn?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAt?$AAo?$AA?5?$AAo?$AAb?$AAt?$AAa?$AAi?$AAn?$AA?5?$AAi?$AAn?$AAc?$AAl?$AAu@ 10014828     untgz.obj
+ 0002:00003884       ??_C@_00CNPNBAHC@?$AA@     10014884     untgz.obj
+ 0002:00003888       ??_C@_17HHGHKGLN@?$AA?9?$AAi?$AA?5?$AA?$AA@ 10014888     untgz.obj
+ 0002:00003890       ??_C@_15LDCBPADN@?$AA?9?$AAi?$AA?$AA@ 10014890     untgz.obj
+ 0002:00003898       ??_C@_15KHFHDPFH@?$AA?9?$AA?9?$AA?$AA@ 10014898     untgz.obj
+ 0002:000038a0       ??_C@_1GC@CLFECEGJ@?$AAE?$AAr?$AAr?$AAo?$AAr?$AA?3?$AA?5?$AA?9?$AA?9?$AA?5?$AAi?$AAn?$AAc?$AAl?$AAu?$AAd?$AAe?$AA?1?$AAe?$AAx?$AAc?$AAl?$AAu?$AAd?$AAe?$AA?5?$AAe?$AAn?$AAd?$AA?5?$AAm?$AAa@ 100148a0     untgz.obj
+ 0002:00003904       __IMPORT_DESCRIPTOR_USER32 10014904     user32:USER32.dll
+ 0002:00003918       __IMPORT_DESCRIPTOR_KERNEL32 10014918     kernel32:KERNEL32.dll
+ 0002:0000392c       __NULL_IMPORT_DESCRIPTOR   1001492c     user32:USER32.dll
+ 0003:00000038       _BZ2_crc32Table            10015038     crctable.obj
+ 0003:00000438       _map_origin                10015438     miniclib.obj
+ 0003:00000448       _BZ2_rNums                 10015448     randtable.obj
+ 0003:00000c48       ?funcName@@3PAPA_WA        10015c48     untgz.obj
+ 0003:00000c60       _errno                     10015c60     miniclib.obj
+ 0003:00000c64       _stdin                     10015c64     miniclib.obj
+ 0003:00000c68       _stdout                    10015c68     miniclib.obj
+ 0003:00000c6c       _stderr                    10015c6c     miniclib.obj
+ 0003:00001484       _g_hwndList                10016484     untgz.obj
+ 0003:00001488       _g_hwndParent              10016488     untgz.obj
+ 0003:0000148c       ?g_hInstance@@3PAUHINSTANCE__@@A 1001648c     untgz.obj
+ 0003:00001490       _lzmaFile                  10016490     <common>
+ 0003:00001494       _infile                    10016494     <common>
+ 0003:00001498       _bzfile                    10016498     <common>
+ 0003:000014a0       _staticCnvBuffer           100164a0     <common>
+
+ entry point at        0001:0000ed70
+
+ Static symbols
+
+ 0001:000005f0       _bz_config_ok              100015f0 f   bzlib.obj
+ 0001:00000620       _default_bzalloc           10001620 f   bzlib.obj
+ 0001:00000640       _default_bzfree            10001640 f   bzlib.obj
+ 0001:00000870       _unRLE_obuf_to_output_FAST 10001870 f   bzlib.obj
+ 0001:00001160       _unRLE_obuf_to_output_SMALL 10002160 f   bzlib.obj
+ 0001:00002490       _crc32_little              10003490 f   crc32.obj
+ 0001:00002890       _crc32_big                 10003890 f   crc32.obj
+ 0001:000071d0       _makeMaps_d                100081d0 f   decompress.obj
+ 0001:00007470       _gz_open                   10008470 f   gzio.obj
+ 0001:000077e0       _check_header              100087e0 f   gzio.obj
+ 0001:00007a20       _get_byte                  10008a20 f   gzio.obj
+ 0001:00007ae0       _destroy                   10008ae0 f   gzio.obj
+ 0001:00008010       _getLong                   10009010 f   gzio.obj
+ 0001:0000ab30       _fixedtables               1000bb30 f   inflate.obj
+ 0001:0000ab60       _updatewindow              1000bb60 f   inflate.obj
+
+ Exports
+
+  ordinal    name
+
+        1    _extract
+               exported name: extract
+        2    _extractFile
+               exported name: extractFile
+        3    _extractV
+               exported name: extractV
